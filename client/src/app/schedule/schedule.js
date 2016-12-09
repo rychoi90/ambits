@@ -3,7 +3,7 @@ import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 
 
-export default class Schedule extends React.Component {
+class Schedule extends React.Component {
   constructor (props) {
     super(props);
 
