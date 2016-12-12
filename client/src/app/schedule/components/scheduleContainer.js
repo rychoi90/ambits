@@ -1,9 +1,13 @@
 import React from 'react';
-import DropDownMenu from 'material-ui/DropDownMenu';
-import MenuItem from 'material-ui/MenuItem';
+// import DropDownMenu from 'material-ui/DropDownMenu';
+// import MenuItem from 'material-ui/MenuItem';
+import DropDownList from './dropdown';
+import commitButton from './commitButton';
+import commitButton from './commitButton';
+import startDate from './startDate';
+import selectDays from './selectDays';
 
-
-class Schedule extends React.Component {
+export default class ScheduleContainer extends React.Component {
   constructor (props) {
     super(props);
 
@@ -36,7 +40,6 @@ class Schedule extends React.Component {
   render() {
     return (
       <div>
-        <navBar />
         <div>
           <ambitName
             onNameInput={this.onNameInput.bind(this)}
@@ -44,10 +47,14 @@ class Schedule extends React.Component {
           />
         </div>
         <div>
-          <dropDown
+          <DropDownMenu
             onDropDownSelect={this.onDropDownSelect.bind(this)}
-            dropdownValue={this.state.dropdownValue}
-          />
+            dropdownValue={this.state.dropdownValue}>
+            <MenuItem value={1} primaryText="Never" />
+            <MenuItem value={2} primaryText="Daily" />
+            <MenuItem value={3} primaryText="Weekly" />
+            <MenuItem value={4} primaryText="Monthly" />
+          </DropDownMenu>
         </div>
         <div>
           <startDate
@@ -68,5 +75,3 @@ class Schedule extends React.Component {
     );
   }
 }
-
-window.Schedule = Schedule;
