@@ -8,7 +8,6 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import Main from './Main'; // Our custom react components
 import Create from './createAmbit/createAmbit.jsx';
 import Schedule from './schedule/components/scheduleContainer.jsx';
-import CheckIn from './checkin/components/checkinContainer.jsx';
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
@@ -66,15 +65,9 @@ render(
   //React-Router with nested routes
   <Router history={browserHistory}>
     <Route component={Main}>
-<<<<<<< HEAD
       <Route path='/' component={CheckinContainer}/>
       <Route path='/create' component={Create}/>
-=======
-      <Route path='/' component={Home}/>
-      <Route path='/create' component={Create}/>
-      <Route path='/checkin' component={CheckIn}/>
       <Route path='/schedule' component={Schedule}/>
->>>>>>> All components rendering corretly, still working on event triggers handling correct data
     </Route>
   </Router>,
   document.getElementById('app'));
