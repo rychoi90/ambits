@@ -50,10 +50,6 @@ export default class ScheduleContainer extends React.Component {
           <DropDownMenu
             onDropDownSelect={this.onDropDownSelect.bind(this)}
             dropdownValue={this.state.dropdownValue}>
-            <MenuItem value={1} primaryText="Never" />
-            <MenuItem value={2} primaryText="Daily" />
-            <MenuItem value={3} primaryText="Weekly" />
-            <MenuItem value={4} primaryText="Monthly" />
           </DropDownMenu>
         </div>
         <div>

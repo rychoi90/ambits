@@ -1,13 +1,19 @@
+import React from 'react';
+import RaisedButton from 'material-ui/RaisedButton';
+
+const style = {
+  margin: 12,
+};
+
 const commitButton = (props) => (
-  <ButtonToolbar>
-    <Button bsStyle="primary" className="commitButton" onClick={
-      function() {
-        // POST to the server, pull relevant data from the dropdown menu and the start data/ select days
-          //
-      }
-    }
-    >Primary</Button>
-  </ButtonToolbar>
+  <div>
+    <RaisedButton
+    label="Schedule It!"
+    style={style}
+    onTouchEnd= {''} // create ambit using date, name etc from current state
+    />
+  </div>
 );
 
-window.commitButton = commitButton;
+
+export default RaisedButtonExampleSimple;
