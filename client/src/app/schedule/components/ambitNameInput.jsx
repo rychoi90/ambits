@@ -6,8 +6,7 @@ const AmbitNameInput = (props) => (
     <TextField
       hintText= "Ambit Name"
       errorText="Please enter an Ambit Name"
-      onKeyDown={''}
-        // props.onNameInput}
+      onKeyDown={props.onNameInput}
     />
   </div>
 );
