@@ -5,15 +5,15 @@ const style = {
   margin: 12,
 };
 
-const commitButton = (props) => (
+const CommitButton = (props) => (
   <div>
     <RaisedButton
     label="Schedule It!"
     style={style}
-    onTouchEnd= {''} // create ambit using date, name etc from current state
+    onTouchEnd= {} // create ambit using date, name etc from current state
     />
   </div>
 );
 
 
-export default RaisedButtonExampleSimple;
+export default CommitButton;
