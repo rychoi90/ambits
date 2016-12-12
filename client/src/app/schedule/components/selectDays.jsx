@@ -14,7 +14,7 @@ const SelectDays = (props) => (
     <Checkbox
       label="Sunday"
       style={styles.checkbox}
-      onCheck={console.log(props)}
+      onCheck={props.onSelectDays.onSelectDaysInputSunday}
     />
 
     <Checkbox

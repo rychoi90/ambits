@@ -6,7 +6,8 @@ import CommitButton from './commitButton.jsx';
 import StartDate from './startDate.jsx';
 import SelectDays from './selectDays.jsx';
 import AmbitNameInput from './ambitNameInput.jsx';
-import * as Utils from '../../utils/utils.js'
+import SelectTime from './selectTime.jsx';
+import * as Utils from '../../utils/utils.js';
 
 export default class ScheduleContainer extends React.Component {
   constructor (props) {
@@ -15,13 +16,13 @@ export default class ScheduleContainer extends React.Component {
     this.state = {
       dropdownValue: 'Weekly',
       startDateValue: null,
-      selectDaysValue: [0,0,0,0,0,0,0], //[Su,M,T,w,Th,F,Sa]
+      selectDaysValue: [false, false, false, false, false, false, false], //[Su,M,T,w,Th,F,Sa]
       ambitNameValue: ''
     };
-    this.onNameInput = this.onNameInput.bind(this);
-    this.onDropDownSelect = this.onDropDownSelect.bind(this);
-    this.onStartDateSet = this.onStartDateSet.bind(this);
 
+    this.onNameInput = this.onNameInput.bind(this);
+    this.onStartDateSet = this.onStartDateSet.bind(this);
+    this.onSelectTime = this.onSelectTime.bind(this);
     this.onSelectDays = {
       onSelectDaysInputSunday: this.onSelectDaysInputSunday.bind(this),
       onSelectDaysInputMonday: this.onSelectDaysInputMonday.bind(this),
@@ -31,18 +32,14 @@ export default class ScheduleContainer extends React.Component {
       onSelectDaysInputFriday: this.onSelectDaysInputFriday.bind(this),
       onSelectDaysInputSaturday: this.onSelectDaysInputSaturday.bind(this),
     }
-
-    console.log(this.onSelectDays.onSelectDaysInputSaturday)
-    // this.state.handleDropDownChange =this.state.handleDropDownChange.bind(this);
   }
+
 
   onNameInput(nameInputEvent) {
     if (nameInputEvent.keyCode === 13) {
       this.setState({
         ambitNameValue: nameInputEvent.target.value
       });
-      // WORKS
-      // console.log(this.state.ambitNamseValue, 'ambitNameValue');
     }
   }
 
@@ -50,13 +47,13 @@ export default class ScheduleContainer extends React.Component {
     this.setState({
       startDateValue: date
     });
-    // WORKS
-    // console.log(date, 'startDateValue');
   }
 
+  onSelectTime(event, time) {
+    console.log(time);
+  }
 // this function was meant to take in the day index and the checked boolean, however 'this' being bound in the SelectDays module is causing issues with accessing this.state.
 //////////////////////////////////////////////////
-
     // onSelectDaysInput(day, event, checked) {
 
       // var currentState = this.state;
@@ -68,9 +65,8 @@ export default class ScheduleContainer extends React.Component {
       // })
       // ;
     // }
-    // // time to write some UGLY CODE YAY.
+    // // time to write some UGLY MFIN CODE.
 //////////////////////////////////////////////////
-
 
 
 // DONT JUDGE ME, IM PRESSED FOR TIME D;
@@ -78,7 +74,7 @@ export default class ScheduleContainer extends React.Component {
 onSelectDaysInputSunday(event, checked) {
   var currentState = this.state;
   currentState.selectDaysValue[0] = checked;
-  this.setState(currentState)
+  this.setState(currentState);
 }
 
 onSelectDaysInputMonday(event, checked) {
@@ -118,16 +114,12 @@ onSelectDaysInputSaturday(event, checked) {
 }
 //////////////////////////////////////////////////
 
-
-  onDropDownSelect(eventObj, selectedItemKey, selectedItemPayload) {
-    this.setState({
-      dropdownValue: selectedItemPayload
-    });
-    console.log(selectedItemPayload, 'dropdownvalue select');
-  }
-
-
-
+  // onDropDownSelect(eventObj, selectedItemKey, selectedItemPayload) {
+  //   this.setState({
+  //     dropdownValue: selectedItemPayload
+  //   });
+  //   console.log(selectedItemPayload, 'dropdownvalue select');
+  // }
 
   render() {
     return (
@@ -151,8 +143,12 @@ onSelectDaysInputSaturday(event, checked) {
         </div>
         <div>
         <SelectDays
-            onSelectDaysInput={this.onSelectDays}
+            onSelectDays={this.onSelectDays}
             selectDaysValue={this.state.selectDaysValue}/>
+        </div>
+        <div>
+        <SelectTime
+            onSelectTime={this.onSelectTime}/>
         </div>
         <div>
           <CommitButton currentState = {this.state}/>
