@@ -142,13 +142,13 @@ onSelectDaysInputSaturday(event, checked) {
             handleDropDownChange={this.state.handleDropDownChange}/>
         </div>
         <div>
+        <SelectTime
+            onSelectTime={this.onSelectTime}/>
+        </div>
+        <div>
         <SelectDays
             onSelectDays={this.onSelectDays}
             selectDaysValue={this.state.selectDaysValue}/>
-        </div>
-        <div>
-        <SelectTime
-            onSelectTime={this.onSelectTime}/>
         </div>
         <div>
           <CommitButton currentState = {this.state}/>

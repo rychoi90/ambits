@@ -49,16 +49,16 @@ class Home extends React.Component {
 //   }
 // }
 
-class Schedule extends React.Component {
-  render(){
-    return (
-      <div>
-        <h1>This page will show how much of a failure you are</h1>
-        <Link to="/">Home</Link>
-      </div>
-    );
-  }
-}
+// class Schedule extends React.Component {
+//   render(){
+//     return (
+//       <div>
+//         <h1>This page will show how much of a failure you are</h1>
+//         <Link to="/">Home</Link>
+//       </div>
+//     );
+//   }
+// }
 // Render the main app react component into the app div.
 // For more details see: https://facebook.github.io/react/docs/top-level-api.html#react.render
 render(
