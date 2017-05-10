@@ -2,6 +2,8 @@
 Mobile-first web application for habit tracking and location-based accountability
 
 > Bet on Tomrrow, Today!
+## Screenshots
+![Alt text](https://cloud.githubusercontent.com/assets/22466498/25923951/0a304df6-3595-11e7-853e-3adf4598fbb5.png "Ambits in Action")
 
 ## Table of Contents
 
@@ -13,9 +15,6 @@ Mobile-first web application for habit tracking and location-based accountabilit
 
 ## Team
   - __Greenfield__: Efe Surekli, George Michel, Robert Littlejohn, Ryan Choi
-  - __Brownfield__:
-  -- Team 1 TBD
-    -- Team 2 TBD
 
 ## Usage
 
