@@ -3,7 +3,7 @@ Mobile-first web application for habit tracking and location-based accountabilit
 
 > Bet on Tomrrow, Today!
 ## Screenshots
-![Alt text](https://cloud.githubusercontent.com/assets/22466498/25923951/0a304df6-3595-11e7-853e-3adf4598fbb5.png "Ambits in Action")
+![Alt text](https://cloud.githubusercontent.com/assets/22466498/25932807/701e50d0-35c8-11e7-8bc4-332951e914b9.png "Ambits in Action")
 
 ## Table of Contents
 
